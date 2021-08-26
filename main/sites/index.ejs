@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+<body>
+    <h1>Welcome to Thumbnail Generator</h1>
+
+    <!--<h3>Recent images</h3>-->
+
+    <form action="upload" method="post" enctype="multipart/form-data">
+        <label for="image_file">Upload image: </label>
+        <!--required-->
+        <input id="image_file" name="image_file" type="file" ><br>
+        <input type="submit" value="Generate Thumbnail">
+    </form>
+</body>
+<%- include("../partials/footer.ejs") %>
+</html>
