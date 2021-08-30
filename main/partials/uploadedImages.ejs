@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%if(locals.files){files.forEach(function(file){%>
+    <a href="upload/<%=file%>">
+        <img src="<%=path+"/"+file+"/img100.png"%>" alt="img100">
+    </a><br>
+    <%});}%>
+</html>

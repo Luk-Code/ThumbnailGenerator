@@ -1,6 +1,7 @@
 HELP.md
 target/
-main/files/
+public/tmp/
+public/images/
 
 ### Others ###
 pom.xml.tag

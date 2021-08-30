@@ -1,1 +1,2 @@
 # ThumbnailGenerator
+npm run startserver

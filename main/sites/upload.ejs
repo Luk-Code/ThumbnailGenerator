@@ -2,10 +2,16 @@
 <html lang="en">
 <%- include("../partials/head.ejs") %>
 <body>
-    <h1>Upload</h1>
+    <h1>Image: <%=imageFileName%></h1>
 
-    <!--<h3>Recent images</h3>-->
-    <a href="/"><button>back</button></a>
+    <a href="/"><button>back</button></a><br>
+    <img src="<%=path%>/origin.png" alt="origin"><br>
+    <a href="<%=path%>/img100.png" download="<%=imageFileName%>_img100">
+        <button>Download 100</button></a>
+    <a href="<%=path%>/img200.png" download="<%=imageFileName%>_img200">
+        <button>Download 200</button></a>
+    <a href="<%=path%>/img400.png" download="<%=imageFileName%>_img400">
+        <button>Download 400</button></a>
 </body>
 <%- include("../partials/footer.ejs") %>
 </html>
