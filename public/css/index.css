@@ -1,3 +1,39 @@
 body {
   height: 100vh;
+  align-content: center;
   background-color: #e0b788; }
+
+#uploadedImagesButton {
+  margin-left: 10vmin;
+  margin-right: 10vmin;
+  background-color: rgba(234, 234, 234, 0.8);
+  padding: 5px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  #uploadedImagesButton a {
+    font-size: clamp(1em, 3vh, 2em);
+    font-weight: bold;
+    font-style: italic; }
+
+#uploadedImages {
+  margin-left: 10vmin;
+  margin-right: 10vmin;
+  background-color: rgba(211, 211, 211, 0.8);
+  padding: 2.5px;
+  border-radius: 0 0 10px 10px;
+  display: none;
+  flex-wrap: wrap; }
+  #uploadedImages div {
+    margin: 2.5px;
+    padding: 7.5px;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(128, 128, 128, 0.4);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #uploadedImages div img {
+      max-width: 100px; }

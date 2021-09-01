@@ -43,9 +43,13 @@ app.get("/",(req,res)=>{
             });
         });
     }else{
-        res.render("index",{cssFile:"index.css"});
+        res.render("index",{
+            cssFile:"index.css"
+        });
     }
 });
+
+//upload
 app.post("/upload",async (req: any, res) => {
     let imageFile: fileUpload.UploadedFile = req.files.image_file;
     let imageFileName: string = imageFile.name;
@@ -78,7 +82,7 @@ app.get("/upload/:fileName",(req,res)=>{
     let pathToFile=path.join("images",user_uuid,imageFileName);
     if(fs.existsSync(path.join("public",pathToFile))){
         res.render("upload",{
-            cssFile:"index.css",
+            cssFile:"upload.css",
             path:pathToFile,
             imageFileName
         });
