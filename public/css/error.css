@@ -15,18 +15,3 @@ footer {
   background-color: #cdcdea;
   color: blue;
   font-weight: bold; }
-
-#origin {
-  align-self: center;
-  max-width: 90vw; }
-
-#btn-back {
-  text-decoration: none;
-  width: fit-content; }
-  #btn-back button {
-    display: inline-flex;
-    align-items: center; }
-
-@media screen and (max-width: 500px) {
-  div .btn-blue {
-    width: 100%; } }

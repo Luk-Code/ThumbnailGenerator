@@ -4,14 +4,20 @@
 <body>
     <h1>Image: <%=imageFileName%></h1>
 
-    <a href="/"><button>back</button></a><br>
+    <a id="btn-back" href="/"><button class="btn-blue">
+            <i class="material-icons">keyboard_arrow_left</i>
+            Go back</button></a><br>
+
     <img id="origin" src="<%=path%>/origin.png" alt="origin"><br>
-    <a href="<%=path%>/img100.png" download="<%=imageFileName%>_img100">
-        <button>Download 100</button></a>
-    <a href="<%=path%>/img200.png" download="<%=imageFileName%>_img200">
-        <button>Download 200</button></a>
-    <a href="<%=path%>/img400.png" download="<%=imageFileName%>_img400">
-        <button>Download 400</button></a>
+
+    <div>
+        <a class="dl_link" href="<%=path%>/img100.png" download="<%=imageFileName%>_img100">
+            <button class="btn-blue">Download 100x<%=imgHeight.img100%></button></a>
+        <a class="dl_link" href="<%=path%>/img200.png" download="<%=imageFileName%>_img200">
+            <button class="btn-blue">Download 200x<%=imgHeight.img200%></button></a>
+        <a class="dl_link" href="<%=path%>/img400.png" download="<%=imageFileName%>_img400">
+            <button class="btn-blue">Download 400x<%=imgHeight.img400%></button></a>
+    </div><br>
 </body>
 <%- include("../partials/footer.ejs") %>
 </html>

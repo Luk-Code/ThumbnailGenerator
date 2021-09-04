@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+<body>
+    <%switch(error){
+        case 400:%>
+        <h1><%=message%></h1>
+    <%  break;
+        case 404:%>
+        <h1>404 Not Found</h1>
+    <%  break;
+        case 502:%>
+        <h1>502 File don't exist</h1>
+    <%  break;}%>
+</body>
+<%- include("../partials/footer.ejs") %>
+</html>

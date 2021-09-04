@@ -4,4 +4,17 @@ body{
   height: 100vh;
   align-content: center;
   background-color: $primary-color;
+  display:flex;
+  flex-direction:column;
+}
+footer{
+  margin-top:auto;
+}
+.btn-blue{
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: $btn-bg-color;
+  color: $btn-color;
+  font-weight: bold;
 }

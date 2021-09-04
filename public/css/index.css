@@ -1,7 +1,20 @@
 body {
   height: 100vh;
   align-content: center;
-  background-color: #e0b788; }
+  background-color: #e0b788;
+  display: flex;
+  flex-direction: column; }
+
+footer {
+  margin-top: auto; }
+
+.btn-blue {
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #cdcdea;
+  color: blue;
+  font-weight: bold; }
 
 #uploadedImagesButton {
   margin-left: 10vmin;
@@ -37,3 +50,8 @@ body {
     align-items: center; }
     #uploadedImages div img {
       max-width: 100px; }
+
+form {
+  margin-left: 5vw; }
+  form label {
+    font-weight: bold; }
