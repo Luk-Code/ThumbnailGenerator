@@ -8,7 +8,7 @@ To run server execute:
 ```sh
 npm run startserver
 ```
-###Launch the website
+##Launch the website
 ```html
 http://localhost:3000/
 ```
