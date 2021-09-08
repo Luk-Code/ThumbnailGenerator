@@ -1,7 +1,9 @@
 @import "basic";
 #origin{
-  align-self: center;
-  max-width: 90vw;
+  align-self: flex-start;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  max-width: 80vw;
 }
 #btn-back{
   text-decoration: none;
