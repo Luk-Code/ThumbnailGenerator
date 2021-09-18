@@ -4,12 +4,14 @@ import sharp from "sharp";
 import fs from "fs";
 import sizeOf from "image-size";
 import express from "express";
-import {v1 as uuidv1} from "uuid";
+import {v1 as uuidv1, v4 as uuidv4} from "uuid";
+import cookieParser from "cookie-parser";
+//const
 const router = express.Router();
+//const user_uuid:string=uuidv1().split('-').splice(1).join('-');
+const cookieMaxAge=365*24*60*60*1000;//365 days
 
-const user_uuid:string=uuidv1().split('-').splice(1).join('-');
-const pathToUserImages:string=path.join("public","images",user_uuid);
-
+//middleware
 router.use(fileUpload({
     /*useTempFiles:true,
     tempFileDir:'tmp/',
@@ -17,6 +19,27 @@ router.use(fileUpload({
     createParentPath:true,
     debug:false
 }));
+router.use(cookieParser());
+
+//let
+let user_uuid:string;
+let pathToUserImages:string;
+
+//cookie
+router.use((req,res,next)=>{
+    console.log("upload",req.cookies);
+    if(!req.cookies["userId"]){
+        let temp_uuid:string=uuidv4();
+        res.cookie("userId",temp_uuid,{maxAge:cookieMaxAge});
+        user_uuid=temp_uuid;
+    }else{
+        user_uuid=req.cookies["userId"];
+    }
+    console.log("user_uuid",user_uuid);
+    pathToUserImages=path.join("public","images",user_uuid);
+    console.log("pathToUserImages",pathToUserImages);
+    next();
+});
 
 router.post("",async (req: any, res) => {
     if(!req.files) {
